@@ -1,0 +1,33 @@
+{
+  "name": "gitfork",
+  "version": "0.0.0",
+  "description": "Fork a Github repo with node.js (programmatically) with just `user/repo` pattern or through [gitfork-cli][gitfork-cli] package for CLI usage.",
+  "scripts": {
+    "lint": "jshint index.js && jscs index.js --reporter inline",
+    "test": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
+  },
+  "author": {
+    "name": "Charlike Make Reagent",
+    "email": "mameto_100@mail.bg",
+    "url": "https://github.com/tunnckoCore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tunnckoCore/gitfork.git"
+  },
+  "keywords": [],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tunnckoCore/gitfork/blob/master/license.md"
+  },
+  "dependencies": {
+    "github-short-url-regex": "~1.0.0",
+    "then-got": "~1.0.5"
+  },
+  "devDependencies": {
+    "istanbul-harmony": "^0.3.1",
+    "mocha": "~2.1.0"
+  }
+}
