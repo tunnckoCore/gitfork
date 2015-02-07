@@ -36,7 +36,6 @@ module.exports = function gitfork(pattern, token, opts) {
     'Authorization': token
   }
 
-
   var promise = got.post(api, options);
 
   return opts && opts.silent ? promise : promise.then(function(res) {

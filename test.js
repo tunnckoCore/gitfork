@@ -14,4 +14,4 @@ gitfork('jonschlinkert/extglob', '[you personal access key here]', {
   org: 'regexps'
 })
 .then(console.log)
-.catch(console.log)
+.catch(console.log);
