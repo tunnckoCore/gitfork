@@ -25,8 +25,10 @@ module.exports = function gitfork(pattern, token, opts) {
     throw new Error('[gitfork] expect valid `user/repo` pattern');
   }
 
+  opts = opts || {};
   api = fmt('%s/%s/forks', api, pattern);
   token = fmt('token %s', token);
+
 
   var options = {};
   options.body = opts.org ? '{"organization": "' + opts.org + '"}': '';
@@ -38,7 +40,7 @@ module.exports = function gitfork(pattern, token, opts) {
 
   var promise = got.post(api, options);
 
-  return opts && opts.silent ? promise : promise.then(function(res) {
+  return opts.silent ? promise : promise.then(function(res) {
     return [JSON.parse(res[0]), res[1].statusCode];
   });
 };
